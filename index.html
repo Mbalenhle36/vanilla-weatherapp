@@ -10,6 +10,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather-app</title>
   </head>
@@ -18,20 +19,22 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="row">
-            <h1>Cape Town</h1>
+            <h1 id="city">Cape Town</h1>
             <h2>
-              <span class="temp">☁ 10</span> <span class="degrees">°C |°F</span>
+              ☁
+              <span class="temp" id="temperature"> 10</span>
+              <span class="degrees">°C |<a href="#">°F</a></span>
             </h2>
             <div class="col-sm-6">
               <ul>
-                <li>Wednesday 22:00</li>
-                <li>Clear</li>
+                <li id="date">Wednesday 22:00</li>
+                <li id="description">Clear</li>
               </ul>
             </div>
             <div class="col-sm-6">
               <ul>
-                <li>Wind:2 km/h</li>
-                <li>Humidity: 73%</li>
+                <li>Humidity: <span id="humidity">73</span>%</li>
+                <li>Wind:<span id="wind">2</span>km/h</li>
               </ul>
             </div>
           </div>

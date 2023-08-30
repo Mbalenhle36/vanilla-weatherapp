@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 40px;
   line-height: 28px;
   font-weight: 100;
   opacity: 0.6;
@@ -23,10 +23,14 @@ li {
   color: #70757a;
   padding-left: 9px;
   padding-top: 6px;
+  text-transform: capitalize;
 }
 
 small {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+  text-decoration: none;
 }
 
 .weather-app-wrapper {
