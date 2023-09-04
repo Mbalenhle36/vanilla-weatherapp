@@ -31,6 +31,7 @@ small {
 }
 a {
   text-decoration: none;
+  cursor: default;
 }
 
 .weather-app-wrapper {
@@ -51,4 +52,8 @@ a {
   font-size: 20px;
   position: relative;
   top: -32px;
+}
+
+.degrees .active {
+  color: black;
 }
