@@ -21,6 +21,34 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function showForecast() {
+  let weatherForecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   <div class="col-2">
+                <span class="forcast-date">${day}</span>
+                <div>
+                  <img
+                    src="https://openweathermap.org/img/wn/02n@2x.png"
+                    alt=""
+                    width="40"
+                  />
+                </div>
+                <div class="temp-forecast">
+                  <span class="forcast-max">15°</span>
+                  <span class="forcast-min">9°</span>
+                </div>
+              </div> 
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  weatherForecastElement.innerHTML = forecastHTML;
+}
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -80,3 +108,4 @@ let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Cape Town");
+showForecast();
